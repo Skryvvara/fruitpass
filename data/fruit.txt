@@ -146,7 +146,8 @@ Strawberries
 String-Beans
 Sweet-Potato
 Tangelo
-Tangerine/Clementine
+Tangerine
+Clementine
 Tangerines
 Tomatillo
 Tomato
@@ -158,5 +159,6 @@ Watermelon
 Waxed-Beans
 Yams
 Yellow-Squash
-Yuca/Cassava
+Yuca
+Cassava
 Zucchini-Squash
