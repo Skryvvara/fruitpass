@@ -1,36 +1,24 @@
 package main
 
 import (
-	"bufio"
-	"embed"
+	_ "embed"
 	"encoding/base64"
 	"flag"
 	"fmt"
 	"math/rand"
 	"os"
-	"path"
+	"strings"
 	"time"
 )
 
-//go:embed all:data
-var data embed.FS
+//go:embed data/fruit.txt
+var fruits string
 
-// readLines reads a whole file into memory
-// and returns a slice of its lines.
-func readLines(filename string) ([]string, error) {
-	file, err := data.Open(path.Join("data", filename))
-	if err != nil {
-		return nil, err
-	}
-	defer file.Close()
+//go:embed data/colors.txt
+var colors string
 
-	var lines []string
-	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		lines = append(lines, scanner.Text())
-	}
-	return lines, scanner.Err()
-}
+//go:embed data/adjectives.txt
+var adjectives string
 
 func getRandomEntry(list []string) string {
 	return list[rand.Intn(len(list)-1)]
@@ -57,20 +45,9 @@ func main() {
 		os.Exit(0)
 	}
 
-	fruitList, err := readLines("fruit.txt")
-	if err != nil {
-		panic(err)
-	}
-
-	colorList, err := readLines("colors.txt")
-	if err != nil {
-		panic(err)
-	}
-
-	adjectiveList, err := readLines("adjectives.txt")
-	if err != nil {
-		panic(err)
-	}
+	adjectiveList := strings.Split(adjectives, "\n")
+	colorList := strings.Split(colors, "\n")
+	fruitList := strings.Split(fruits, "\n")
 
 	password := fmt.Sprintf("%d%s-%s-%s!", rand.Intn(9), getRandomEntry(adjectiveList), getRandomEntry(colorList), getRandomEntry(fruitList))
 	fmt.Println(password)
