@@ -20,8 +20,16 @@ var colors string
 //go:embed data/adjectives.txt
 var adjectives string
 
+var adjectiveList = strings.Split(adjectives, "\n")
+var colorList = strings.Split(colors, "\n")
+var fruitList = strings.Split(fruits, "\n")
+
 func getRandomEntry(list []string) string {
 	return list[rand.Intn(len(list)-1)]
+}
+
+func GeneratePassword() string {
+	return fmt.Sprintf("%d%s-%s-%s!", rand.Intn(9), getRandomEntry(adjectiveList), getRandomEntry(colorList), getRandomEntry(fruitList))
 }
 
 func init() {
@@ -45,11 +53,7 @@ func main() {
 		os.Exit(0)
 	}
 
-	adjectiveList := strings.Split(adjectives, "\n")
-	colorList := strings.Split(colors, "\n")
-	fruitList := strings.Split(fruits, "\n")
-
-	password := fmt.Sprintf("%d%s-%s-%s!", rand.Intn(9), getRandomEntry(adjectiveList), getRandomEntry(colorList), getRandomEntry(fruitList))
+	password := GeneratePassword()
 	fmt.Println(password)
 
 	if *encode {
