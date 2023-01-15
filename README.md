@@ -9,7 +9,6 @@
   <h3 align="center">Fruitpass</h3>
 
  <p align="center">
-    This is a work in progress.
     <br />
     <a href="https://github.com/Skryvvara/fruitpass">Report a Bug☠️</a>
     ·
