@@ -10,9 +10,9 @@
 
  <p align="center">
     <br />
-    <a href="https://github.com/Skryvvara/fruitpass">Report a Bug☠️</a>
+    <a href="https://github.com/Skryvvara/fruitpass">Report a Bug ☠️</a>
     ·
-    <a href="https://github.com/Skryvvara/fruitpass">Request a Feature📝</a>
+    <a href="https://github.com/Skryvvara/fruitpass">Request a Feature 📝</a>
   </p>
 </div>
 
