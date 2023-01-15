@@ -1,4 +1,21 @@
-# Fruitpass
+<div id="top"></div>
+
+<br />
+<div align="center">
+  <a href="https://github.com/Skryvvara/fruitpass">
+      <img src=".github/assets/fruitpass.png" width=128 height=128 alt="Logo">
+  </a>
+
+  <h3 align="center">Fruitpass</h3>
+
+ <p align="center">
+    This is a work in progress.
+    <br />
+    <a href="https://github.com/Skryvvara/fruitpass">Report a Bug☠️</a>
+    ·
+    <a href="https://github.com/Skryvvara/fruitpass">Request a Feature📝</a>
+  </p>
+</div>
 
 Fruitpass is a command line utility written in Go to generate password by using a list of adjectives, colours, and fruits and also adds a random number and a special symbol.
 
@@ -18,10 +35,16 @@ go build -o bin/fruitpass
 cp bin/fruitpass /usr/local/bin/fruitpass
 ```
 
-## Example usage
+# Example usage
 
 <img src=".github/assets/basic-usage.svg" />
 
-## Example usage with base64 encoding
+# Example usage with base64 encoding
 
 <img src=".github/assets/usage-encode.svg" />
+
+# Special Thanks
+
+## [Ymir](https://twitter.com/ymirbirb)
+
+Drew the awesome logo for Fruitpass. Thank you very much!
