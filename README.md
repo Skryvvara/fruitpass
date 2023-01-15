@@ -16,6 +16,8 @@
   </p>
 </div>
 
+## About
+
 Fruitpass is a command line utility written in Go to generate password by using a list of adjectives, colours, and fruits and also adds a random number and a special symbol.
 
 The goal was to get password that are easy (or easier) to memorize than long string of random symbols.
